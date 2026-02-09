@@ -1,0 +1,13 @@
+# Example terraform.tfvars for github-oidc-setup.tf
+# Copy this file to terraform.tfvars and fill in your values
+
+# AWS Configuration
+aws_region = "us-east-1"
+
+# GitHub Configuration
+github_org  = "your-github-username-or-org"  # e.g., "mycompany" or "johndoe"
+github_repo = "your-repo-name"                # e.g., "terraform-infrastructure"
+
+# Terraform State Resources (from backend-setup.tf outputs)
+state_bucket_arn    = "arn:aws:s3:::terraform-state-dataingestion"
+dynamodb_table_arn  = "arn:aws:dynamodb:us-east-1:123456789012:table/dataingestion-terraform-state-lock"
